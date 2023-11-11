@@ -1,10 +1,20 @@
 from files_handler import save_to_file, read_from_file
-from rc4 import encrypt, decrypt
+from encryption_and_decryption import encrypt, decrypt
 
 plaintext_file_name = "./files/plaintext.txt"
 ciphertext_file_name = "./files/ciphertext.txt"
 
+
 def encrypt_menu():
+    '''
+    Menu for encryption.
+
+    Allows the user to choose between reading text from a file or console,
+    then encrypts the text using the RC-4 algorithm with a secret key.
+
+    Returns:
+        None
+    '''
     print("\nEncryption")
     print("1 - to read text from file")
     print("2 - to read text from console")
@@ -31,6 +41,15 @@ def encrypt_menu():
 
 
 def decrypt_menu():
+    '''
+    Menu for decryption.
+
+    Allows the user to choose between reading ciphertext from a file or console,
+    then decrypts the ciphertext using the RC-4 algorithm with a secret key.
+
+    Returns:
+        None
+    '''
     print("\nDecryption")
     print("1 - to read ciphertext from file")
     print("2 - to read ciphertext from console")
@@ -55,7 +74,16 @@ def decrypt_menu():
     print("\nResult:")
     print(plaintext)
 
+
 def main_menu():
+    '''
+    Main menu for RC-4 encryption and decryption.
+
+    Allows the user to choose between encryption (E), decryption (D), or exit.
+
+    Returns:
+        None
+    '''
     print("\nRC-4")
     choice = input('E - Encrypt \nD - Decrypt\n').upper()
     match(choice):
