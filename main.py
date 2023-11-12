@@ -1,4 +1,5 @@
-from menu import main_menu
+from rc4_implementation.rc4_menu import RC4_menu
 
 if __name__ == '__main__':
-    main_menu()
+    menu = RC4_menu()
+    menu.main_menu()
